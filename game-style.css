@@ -1,0 +1,252 @@
+/* FONTS */
+@font-face {
+    font-family: Arnel;
+    src: url(FONTS/arnel.otf);
+}
+
+@font-face {
+    font-family: Helvectica;
+    src: url(FONTS/helvetica.ttf);
+}
+
+@font-face {
+    font-family: Komik;
+    src: url(FONTS/komik.ttf);
+}
+
+/* GAME BOARD ELEMENTS */
+.game-board {
+    height: 685px;
+    width: 1100px;
+    background-image: url("ASSETS/ntbk-bg.png");
+    background-size: 100% auto;   /* ✅ makes it bigger */
+    background-repeat: no-repeat;
+    background-position: center center;  /* ✅ centers it */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.prompt-container{
+    width: 550px;
+    height: 536px;
+    background-image: url("ASSETS/prompt-box.png");
+    background-size: contain;   /* ✅ ensures full image fits */
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    padding: 40px;  /* adjust if text feels cramped */
+    box-sizing: border-box;
+}
+
+.prompt-text{
+    width: 313px;
+    margin: 0px 0px 40px 65px;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+          text-shadow: 
+     2px 2px 0 black,
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  0   0 black,
+    -2px  0   0 black,
+     0    2px 0 black,
+     0   -2px 0 black; 
+}
+
+.score{
+    font-family: Komik;
+    font-size: 32px;
+    color: #000000;
+    margin: 0px 0px 10px 42px;
+}
+
+.choice-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice-a{
+    background-image: url(ASSETS/choice-a.png);
+    width: 402px;
+    height: 98px;
+    background-size: 402px 98px;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    padding: 35px 20px 35px 96px;
+    font-family: Helvectica;
+    font-size: 20px;
+    color: #ffffff;
+
+    font-weight: bold;
+    margin: 10px 0px 0px 0px;
+    text-transform: uppercase;
+}
+
+.choice-b{
+    background-image: url(ASSETS/choice-b.png);
+    width: 402px;
+    height: 98px;
+    background-size: 402px 98px;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    padding: 35px 20px 35px 96px;
+    font-family: Helvectica;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;  
+    margin: 10px 0px 0px 0px;
+    text-transform: uppercase;
+}
+
+.choice-c{
+    background-image: url(ASSETS/choice-c.png);
+    width: 402px;
+    height: 98px;
+    background-size: 402px 98px;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    padding: 35px 20px 35px 96px;
+    font-family: Helvectica;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0px 0px 0px;
+    text-transform: uppercase;
+}
+
+.choice-btn:hover{
+    transition-duration: 150ms;
+    transform: translateY(-0.50em);
+}
+
+.choice-btn:active{
+    transition-duration: 150ms;
+    transform: translateY(-0.25em);
+}
+
+/* TABLET MEDIA QUERIES */
+@media only screen and (max-width: 768px){
+    .game-board{
+        max-width: 450px;
+        flex-direction: column;
+        background-image: none;
+    }
+
+    .prompt-container{
+        width: 370px;
+        height: 300px;
+        background-size: 370px auto;
+        background-repeat: no-repeat;
+        margin: 0px 0px 5px 0px;
+    }
+    
+    .prompt-text{
+        width: 252px;
+        margin: 0px 59px 0px 59px;
+        font-size: 14px;
+    }
+    
+    .score{
+        font-size: 18px;
+        margin: 0px 0px 5px 0px;
+    }
+    
+    .choice-a{
+        width: 402px;
+        height: 98px;
+        background-size: 402px 98px;
+        padding: 27px 16px 27px 76px;
+        font-size: 14px;
+        margin: 5px 0px 0px 0px;
+    }
+    
+    .choice-b{
+        width: 402px;
+        height: 98px;
+        background-size: 402px 98px;
+        padding: 27px 76px 27px 16px;
+        font-size: 14px;
+        margin: 5px 0px 0px 0px;
+    }
+    
+    .choice-c{
+        width: 402px;
+        height: 98px;
+        background-size: 402px 98px;
+        padding: 27px 16px 27px 76px;
+        font-size: 14px;
+        margin: 5px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width: 428px){
+    .game-board{
+        max-width: 330px;
+        flex-direction: column;
+        background-image: none;
+    }
+
+    .prompt-container{
+        width: 370px;
+        height: 300px;
+        background-size: 370px auto;
+        background-repeat: no-repeat;
+        margin: 0px 0px 5px 0px;
+    }
+    
+    .prompt-text{
+        width: 252px;
+        margin: 0px 59px 0px 69px;
+        font-size: 14px;
+    }
+    
+    .score{
+        font-size: 18px;
+        margin: 0px 0px 5px 0px;
+    }
+    
+    .choice-a{
+        width: 320px;
+        height: 78.01px;
+        background-size: 320px 78.01px;
+        padding: 27px 16px 27px 76px;
+        font-size: 12px;
+        margin: 5px 0px 0px 0px;
+    }
+    
+    .choice-b{
+        width: 320px;
+        height: 78.01px;
+        background-size: 320px 78.01px;
+        padding: 27px 76px 27px 16px;
+        font-size: 12px;
+        margin: 5px 0px 0px 0px;
+    }
+    
+    .choice-c{
+        width: 320px;
+        height: 78.01px;
+        background-size: 320px 78.01px;
+        padding: 27px 16px 27px 76px;
+        font-size: 12px;
+        margin: 5px 0px 0px 0px;
+    }
+}
